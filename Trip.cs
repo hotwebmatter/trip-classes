@@ -20,5 +20,20 @@ namespace trip_classes
         public double GasolineGallonsUsed { set; get; }
         public double MilesPerGallon { set; get; }
         public double CostPerMile { set; get; }
+        // constructors
+        public Trip()
+        {
+            destination = "New York City";
+            milesTraveled = 2789.4;
+            gasolineCostTotal = 363.41;
+            gasolineGallonsUsed = 111.6;
+        }
+        public Trip(string dest, double miles, double gasCost, double gasGallons)
+        {
+            destination = dest;
+            milesTraveled = miles;
+            gasolineCostTotal = gasCost;
+            gasolineGallonsUsed = gasGallons;
+        }
     }
 }
