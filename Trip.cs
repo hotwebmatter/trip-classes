@@ -53,7 +53,15 @@ namespace trip_classes
         // override base.ToString() method
         public override string ToString()
         {
-            return base.ToString();
+            string result = String.Format("****** Trip Mileage Data Table ******\n");
+            result += String.Format("* {0, 18}{1, 15} *\n", "Destination:", destination);
+            result += String.Format("* {0, 18}{1, 15:N} *\n", "Miles Traveled:", milesTraveled);
+            result += String.Format("* {0, 18}{1, 15:C} *\n", "Gas (cost):", gasolineCostTotal);
+            result += String.Format("* {0, 18}{1, 15:N} *\n", "Gas (gallons):", gasolineGallonsUsed);
+            result += String.Format("* {0, 18}{1, 15:N} *\n", "Miles Per Gallon:", milesPerGallon);
+            result += String.Format("* {0, 18}{1, 15:C} *\n", "Cost Per Mile:", costPerMile);
+            result += String.Format("*************************************\n");
+            return result;
         }
     }
 }
