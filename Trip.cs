@@ -13,5 +13,12 @@ namespace trip_classes
                        gasolineGallonsUsed,
                        milesPerGallon,
                        costPerMile;
+        // properties
+        public string Destination { set; get; }
+        public double MilesTraveled { set; get; }
+        public double GasolineCostTotal { set; get; }
+        public double GasolineGallonsUsed { set; get; }
+        public double MilesPerGallon { set; get; }
+        public double CostPerMile { set; get; }
     }
 }
