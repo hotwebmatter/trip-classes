@@ -8,7 +8,9 @@ namespace trip_classes
         static void Main(string[] args)
         {
             Trip aTrip = new Trip();
+            Trip bTrip = new Trip("Los Angeles", 2789.4, 363.41, 111.6);
             WriteLine(aTrip.ToString());
+            WriteLine(bTrip.ToString());
         }
     }
 }
