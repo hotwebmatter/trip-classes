@@ -50,5 +50,10 @@ namespace trip_classes
         {
             return gasolineCostTotal / gasolineGallonsUsed;
         }
+        // override base.ToString() method
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
