@@ -10,16 +10,12 @@ namespace trip_classes
         private string destination;
         private double milesTraveled,
                        gasolineCostTotal,
-                       gasolineGallonsUsed,
-                       milesPerGallon,
-                       costPerMile;
+                       gasolineGallonsUsed;
         // properties
         public string Destination { set; get; }
         public double MilesTraveled { set; get; }
         public double GasolineCostTotal { set; get; }
         public double GasolineGallonsUsed { set; get; }
-        public double MilesPerGallon { set; get; }
-        public double CostPerMile { set; get; }
         // constructors
         public Trip()
         {
@@ -35,15 +31,15 @@ namespace trip_classes
             gasolineCostTotal = gasCost;
             gasolineGallonsUsed = gasGallons;
         }
-        // calculate miles per gallon (void method)
-        public void CalculateMilesPerGallon()
+        // calculate miles per gallon
+        public double CalculateMilesPerGallon()
         {
-            milesPerGallon = milesTraveled / gasolineGallonsUsed;
+            return milesTraveled / gasolineGallonsUsed;
         }
-        // calculate cost per mile (void method)
-        public void CalculateCostPerMile()
+        // calculate cost per mile
+        public double CalculateCostPerMile()
         {
-            costPerMile = gasolineCostTotal / milesTraveled;
+            return gasolineCostTotal / milesTraveled;
         }
         // bonus (not in problem spec): calculate cost per gallon
         public double CalculateCostPerGallon()
@@ -58,8 +54,8 @@ namespace trip_classes
             result += String.Format("* {0, 18}{1, 15:N} *\n", "Miles Traveled:", milesTraveled);
             result += String.Format("* {0, 18}{1, 15:C} *\n", "Gas (cost):", gasolineCostTotal);
             result += String.Format("* {0, 18}{1, 15:N} *\n", "Gas (gallons):", gasolineGallonsUsed);
-            result += String.Format("* {0, 18}{1, 15:N} *\n", "Miles Per Gallon:", milesPerGallon);
-            result += String.Format("* {0, 18}{1, 15:C} *\n", "Cost Per Mile:", costPerMile);
+            result += String.Format("* {0, 18}{1, 15:N} *\n", "Miles Per Gallon:", CalculateMilesPerGallon());
+            result += String.Format("* {0, 18}{1, 15:C} *\n", "Cost Per Mile:", CalculateCostPerMile());
             result += String.Format("* {0, 18}{1, 15:C} *\n", "Cost Per Gallon:", CalculateCostPerGallon());
             result += String.Format("*************************************\n");
             return result;
