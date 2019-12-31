@@ -7,7 +7,8 @@ namespace trip_classes
     {
         static void Main(string[] args)
         {
-            WriteLine("Hello World!");
+            Trip aTrip = new Trip();
+            WriteLine(aTrip.ToString());
         }
     }
 }
