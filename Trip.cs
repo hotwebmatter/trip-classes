@@ -60,6 +60,7 @@ namespace trip_classes
             result += String.Format("* {0, 18}{1, 15:N} *\n", "Gas (gallons):", gasolineGallonsUsed);
             result += String.Format("* {0, 18}{1, 15:N} *\n", "Miles Per Gallon:", milesPerGallon);
             result += String.Format("* {0, 18}{1, 15:C} *\n", "Cost Per Mile:", costPerMile);
+            result += String.Format("* {0, 18}{1, 15:C} *\n", "Cost Per Gallon:", CalculateCostPerGallon());
             result += String.Format("*************************************\n");
             return result;
         }
