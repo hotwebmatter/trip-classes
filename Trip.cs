@@ -40,5 +40,10 @@ namespace trip_classes
         {
             milesPerGallon = milesTraveled / gasolineGallonsUsed;
         }
+        // calculate cost per mile (void method)
+        public void CalculateCostPerMile()
+        {
+            costPerMile = gasolineCostTotal / milesTraveled;
+        }
     }
 }
